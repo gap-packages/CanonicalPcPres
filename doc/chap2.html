@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (CanonicalPcPres) - Chapter 2: Reference</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap2"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap2_mj.html">[MathJax on]</a></p>
+<p><a id="X782AAE4E86411FF4" name="X782AAE4E86411FF4"></a></p>
+<div class="ChapSects"><a href="chap2.html#X782AAE4E86411FF4">2 <span class="Heading">Reference</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7D418E5D874EBE27">2.1 <span class="Heading">Canonical presentations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8362220D8733E698">2.1-1 CanonicalPcGroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X868477457E00CF93">2.2 <span class="Heading">Isomorphism attribute</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X79D0029A7F9EBFAC">2.2-1 IsomorphismCanonicalPcGroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X870E42FF82FAE279">2.3 <span class="Heading">Information classes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X826C402E7B687190">2.3-1 InfoCanonicalPcPres</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C07A284856BE35A">2.3-2 InfoCanonicalPcPresTimings</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7D9044767BEB1523">2.4 <span class="Heading">Global variables</span></a>
+</span>
+</div>
+</div>
+
+<h3>2 <span class="Heading">Reference</span></h3>
+
+<p><a id="X7D418E5D874EBE27" name="X7D418E5D874EBE27"></a></p>
+
+<h4>2.1 <span class="Heading">Canonical presentations</span></h4>
+
+<p><a id="X8362220D8733E698" name="X8362220D8733E698"></a></p>
+
+<h5>2.1-1 CanonicalPcGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CanonicalPcGroup</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: the canonical pc group of <var class="Arg">G</var></p>
+
+<p>Let <var class="Arg">G</var> be a finite solvable group. This function returns the canonical pc presentation <span class="SimpleMath">can(G)</span>. Isomorphic input groups yield equal pc presentations. If <var class="Arg">G</var> is not already given as a pc group, the package first converts it via <code class="func">IsomorphismSpecialPcGroup</code> (<a href="https://docs.gap-system.org/doc/ref/chap46.html#X82BE14A986FA6882"><span class="RefLink">Reference: IsomorphismSpecialPcGroup</span></a>).</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := SmallGroup(36, 9);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := CanonicalPcGroup(G);</span>
+&lt;pc group of size 36 with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(H);</span>
+36
+</pre></div>
+
+<p><a id="X868477457E00CF93" name="X868477457E00CF93"></a></p>
+
+<h4>2.2 <span class="Heading">Isomorphism attribute</span></h4>
+
+<p><a id="X79D0029A7F9EBFAC" name="X79D0029A7F9EBFAC"></a></p>
+
+<h5>2.2-1 IsomorphismCanonicalPcGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismCanonicalPcGroup</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: an isomorphism from <var class="Arg">G</var> to its canonical pc presentation</p>
+
+<p>Let <var class="Arg">G</var> be a finite solvable group. This attribute returns an isomorphism from <var class="Arg">G</var> to <code class="func">CanonicalPcGroup</code> (<a href="chap2.html#X8362220D8733E698"><span class="RefLink">2.1-1</span></a>) applied to <var class="Arg">G</var>. If necessary, <var class="Arg">G</var> is first converted to a pc group using <code class="func">IsomorphismSpecialPcGroup</code> (<a href="https://docs.gap-system.org/doc/ref/chap46.html#X82BE14A986FA6882"><span class="RefLink">Reference: IsomorphismSpecialPcGroup</span></a>).</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := SmallGroup(24, 12);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iso := IsomorphismCanonicalPcGroup(G);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ Source(iso) = G, Size(Range(iso)) ];</span>
+[ true, 24 ]
+</pre></div>
+
+<p><a id="X870E42FF82FAE279" name="X870E42FF82FAE279"></a></p>
+
+<h4>2.3 <span class="Heading">Information classes</span></h4>
+
+<p><a id="X826C402E7B687190" name="X826C402E7B687190"></a></p>
+
+<h5>2.3-1 InfoCanonicalPcPres</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoCanonicalPcPres</code></td><td class="tdright">(&nbsp;info class&nbsp;)</td></tr></table></div>
+<p>This info class reports the stages of the canonical-presentation computation. Level 0 suppresses these messages; higher levels provide progressively more detail.</p>
+
+<p><a id="X7C07A284856BE35A" name="X7C07A284856BE35A"></a></p>
+
+<h5>2.3-2 InfoCanonicalPcPresTimings</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoCanonicalPcPresTimings</code></td><td class="tdright">(&nbsp;info class&nbsp;)</td></tr></table></div>
+<p>This info class reports timing measurements collected during the computation. Set its level to 0 for quiet, reproducible examples.</p>
+
+<p><a id="X7D9044767BEB1523" name="X7D9044767BEB1523"></a></p>
+
+<h4>2.4 <span class="Heading">Global variables</span></h4>
+
+<p>There are two global variables, <code class="code">canform_USE_NEW_AUT</code> and <code class="code">canform_USE_NEW_CP</code>, that determine whether the required automorphism group and compatible pairs constructions are performed using the standard GAP functions <code class="code">AutomorphismGroup</code> and <code class="code">CompatiblePairs</code> or the package internal variants. By default, both variables are set <code class="code">true</code>, because this often seems to improve the performance. However, there are groups (even of small orders) where setting one / both variables to <code class="code">false</code> would decrease the runtime.</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

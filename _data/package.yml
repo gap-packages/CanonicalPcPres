@@ -1,76 +1,79 @@
-name: GitHubPagesForGAP
-version: "0.2"
-license: "0BSD"
-date: 2017-02-04
+name: CanonicalPcPres
+version: "1.0"
+license: "GPL-2.0-or-later"
+date: 2026-07-11
 description: |
-    A GitHub Pages generator for GAP packages
+    Canonical Presentations of Finite Solvable Groups
 
 authors:
+    - name: Santiago Barrera Acevedo
+      url: https://scholars.latrobe.edu.au/s2barreraace
+    - name: Heiko Dietrich
+      url: http://users.monash.edu.au/~heikod/
     - name: Max Horn
-      url: http://www.quendi.de/math
-    - name: A. U. Thor
+      url: https://www.quendi.de/math
 
 maintainers:
+    - name: Santiago Barrera Acevedo
+      url: https://scholars.latrobe.edu.au/s2barreraace
+    - name: Heiko Dietrich
+      url: http://users.monash.edu.au/~heikod/
     - name: Max Horn
-      url: http://www.quendi.de/math
-    - name: Jan Itor
+      url: https://www.quendi.de/math
 
-GAP: ">=4.8.1"
+GAP: ">= 4.13"
 
 needed-pkgs:
-    - name: "GAPDoc"
-      version: ">= 1.2"
-      url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
-    - name: "IO"
-      version: ">= 4.1"
-      url: "https://gap-packages.github.io/io"
-
-suggested-pkgs:
+    - name: "anupq"
+      version: ">= 3.3.0"
+      url: "https://gap-packages.github.io/anupq/"
     - name: "orb"
-      version: ">= 4.2"
+      version: ">= 4.9"
       url: "https://gap-packages.github.io/orb"
+    - name: "images"
+      version: ">= 1.3"
+      url: "https://gap-packages.github.io/images/"
 
-www: https://gap-system.github.io/GitHubPagesForGAP/
+www: https://gap-packages.github.io/CanonicalPcPres/
 readme: README.md
-packageinfo: https://gap-system.github.io/GitHubPagesForGAP/PackageInfo.g
-github: https://github.com/gap-system/GitHubPagesForGAP
+packageinfo: https://gap-packages.github.io/CanonicalPcPres/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-system/GitHubPagesForGAP/releases/download/v0.2/GitHubPagesForGAP-0.2.tar.gz
-    - name: .tar.bz2
-      url: https://github.com/gap-system/GitHubPagesForGAP/releases/download/v0.2/GitHubPagesForGAP-0.2.tar.bz2
+      url: https://github.com/gap-packages/CanonicalPcPres/releases/download/v1.0/CanonicalPcPres-1.0.tar.gz
 
 abstract: |
-    This is a pseudo package that contains no actual  <span class="pkgname">GAP</span> code. Instead, it is a template for other  GAP packages that allows to quickly setup GitHub Pages.
+    The <span class="pkgname">CanonicalPcPres</span> package computes canonical polycyclic presentations of finite solvable groups, together with explicit isomorphisms from the input groups to their canonical presentations.
 
-status: other
-doc-html: doc/chap0.html
+doc-html: doc/chap0_mj.html
 doc-pdf: doc/manual.pdf
 keywords: |
-    GitHub Pages, GAP.
+    canonical presentations, solvable groups, pc groups, group isomorphisms.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>HTI17</span>]   <b class='BibAuthor'>Horn, M., Thor, A. U. and Itor, J.</b>,
-     <i class='BibTitle'>GitHubPagesForGAP, A GitHub Pages generator for GAP packages,
-             Version 0.2</i>
-     (<span class='BibYear'>2017</span>)<br />
+    [<span class='BibKey'>ADH26</span>]   <b class='BibAuthor'>Barrera Acevedo, S., Dietrich, H. and Horn, M.</b>,
+     <i class='BibTitle'>CanonicalPcPres, Canonical Presentations of Finite Solvable Groups,
+             Version 1.0</i>
+     (<span class='BibYear'>2026</span>)<br />
     (<span class='BibNote'>GAP package</span>),
-    <span class='BibHowpublished'><a href="https://gap-system.github.io/GitHubPagesForGAP/">https://gap-system.github.io/GitHubPagesForGAP/</a></span>.
+    <span class='BibHowpublished'><a href="https://gap-packages.github.io/CanonicalPcPres/">https://gap-packages.github.io/CanonicalPcPres/</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ GitHubPagesForGAP0.2,
-      author =           {Horn, M. and Thor, A. U. and Itor, J.},
-      title =            {{GitHubPagesForGAP}, A GitHub Pages generator for GAP packages, {V}ersion 0.2},
-      month =            {Feb},
-      year =             {2017},
+    @misc{ CanonicalPcPres,
+      author =           {{Barrera Acevedo}, S. and Dietrich, H. and Horn, M.},
+      title =            {{CanonicalPcPres},  {Canonical Presentations of Finite
+                          Solvable Groups}, {V}ersion 1.0},
+      month =            {Jul},
+      year =             {2026},
       note =             {GAP package},
-      howpublished =     {\href                              {https://gap-system.github.io/GitHubPagesForGAP/}
-                          {\texttt{https://gap-system.github.io/}\discretionary
-                          {}{}{}\texttt{GitHubPagesForGAP/}}},
-      keywords =         {GitHub Pages; GAP},
-      printedkey =       {HTI17}
+      howpublished =     {\href
+                          {https://gap-packages.github.io/CanonicalPcPres/}
+                          {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary
+                          {}{}{}\texttt{CanonicalPcPres/}}},
+      keywords =         {canonical  presentations;  solvable groups; pc groups;
+                          group isomorphisms},
+      printedkey =       {ADH26}
     }
 
